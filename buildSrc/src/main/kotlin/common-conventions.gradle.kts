@@ -15,10 +15,18 @@ repositories {
 group = project.group.toString()
 version = project.version.toString()
 
+graalvmNative {
+    binaries {
+        named("main") {
+            imageName.set(project.name + "-" + project.version)
+        }
+    }
+}
+
 dependencies {
     constraints {
         // Define dependency versions as constraints
-        implementation("org.apache.commons:commons-text:1.10.0")
+        implementation("org.apache.commons:commons-text:1.11.0")
 
     }
     implementation("org.slf4j:slf4j-api:${libs.findVersion("slf4j").get()}")
@@ -35,8 +43,8 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(libs.findVersion("jdk").get().toString()))
     }
-    withSourcesJar()
-    withJavadocJar()
+//    withSourcesJar()
+//    withJavadocJar()
 }
 
 tasks.named<Test>("test") {
