@@ -5,4 +5,4 @@ plugins {
 }
 
 rootProject.name = "spring-multi-module-template"
-include("api", "utilities")
+include("api", "commons")
