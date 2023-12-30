@@ -10,6 +10,8 @@ slf4j = "2.0.9"
 logback = "1.4.14"
 easyexcel = "3.3.3"
 jjwt = "0.12.3"
+knife4j = "4.4.0"
+swagger3="2.2.19"
 
 [libraries]
 kotlin-allopen = { module = "org.jetbrains.kotlin:kotlin-allopen", version.ref = "kotlin" }
@@ -31,6 +33,10 @@ graalvm-native = { module = "org.graalvm.buildtools:native-gradle-plugin", versi
 jjwt-api = { module = "io.jsonwebtoken:jjwt-api", version.ref = "jjwt" }
 jjwt-impl = { module = "io.jsonwebtoken:jjwt-impl", version.ref = "jjwt" } # use runtime
 jjwt-jackson = { module = "io.jsonwebtoken:jjwt-jackson", version.ref = "jjwt" } # use runtime
+
+knife4j-openapi3 = { module = "com.github.xiaoymin:knife4j-openapi3-jakarta-spring-boot-starter", version.ref = "knife4j" }
+swagger-models = { module = "io.swagger.core.v3:swagger-models", version.ref = "swagger3" }
+swagger-annotations = { module = "io.swagger.core.v3:swagger-annotations", version.ref = "swagger3" }
 
 [plugins]
 

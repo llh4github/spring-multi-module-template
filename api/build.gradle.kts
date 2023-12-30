@@ -11,6 +11,7 @@ dependencies {
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
+    implementation(libs.knife4j.openapi3)
     implementation(project(":commons"))
 }
 
