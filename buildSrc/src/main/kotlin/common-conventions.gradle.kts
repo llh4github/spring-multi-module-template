@@ -12,6 +12,8 @@ repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
+group = project.group.toString()
+version = project.version.toString()
 
 dependencies {
     constraints {
