@@ -1,0 +1,24 @@
+[versions]
+oshaiKotlinLogging = "5.1.0"
+jdk = "17"
+kotlin = "1.9.20"
+kotlinForDetekt = "1.9.10"
+springBoot = "3.2.1"
+graalvm-plugin = "0.9.28"
+junit5 = "5.10.0"
+slf4j = "2.0.9"
+logback = "1.4.14"
+
+[libraries]
+kotlin-allopen = { module = "org.jetbrains.kotlin:kotlin-allopen", version.ref = "kotlin" }
+kotlin-noarg = { module = "org.jetbrains.kotlin:kotlin-noarg", version.ref = "kotlin" }
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+# kotlin日志适配库
+# https://github.com/oshai/kotlin-logging
+oshai-kotlinLogging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "oshaiKotlinLogging" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+springBoot-gradle = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "springBoot" }
+graalvm-native = { module = "org.graalvm.buildtools:native-gradle-plugin", version.ref = "graalvm-plugin" }
+[plugins]
+
