@@ -10,6 +10,9 @@ class AppException(
     val msg: String,
     cause: Throwable? = null
 ) : RuntimeException(msg, cause) {
+
+    constructor(error: ErrorConvention, cause: Throwable? = null) : this(error.code, error.msg, cause)
+
     fun errorMsg(): ErrorMsg {
         return ErrorMsg(cod, msg)
     }
