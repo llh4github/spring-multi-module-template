@@ -8,17 +8,29 @@ graalvm-plugin = "0.9.28"
 junit5 = "5.10.0"
 slf4j = "2.0.9"
 logback = "1.4.14"
+easyexcel = "3.3.3"
+jjwt = "0.12.3"
 
 [libraries]
 kotlin-allopen = { module = "org.jetbrains.kotlin:kotlin-allopen", version.ref = "kotlin" }
 kotlin-noarg = { module = "org.jetbrains.kotlin:kotlin-noarg", version.ref = "kotlin" }
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-
+easyexcel = { module = "com.alibaba:easyexcel", version.ref = "easyexcel" }
+apache-compress = { module = "org.apache.commons:commons-compress", version = "1.25.0" }
+apache-pool2 = { module = "org.apache.commons:commons-pool2", version = "2.12.0" }
+apache-io = { module = "commons-io:commons-io", version = "2.15.1" }
 # kotlin日志适配库
 # https://github.com/oshai/kotlin-logging
 oshai-kotlinLogging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "oshaiKotlinLogging" }
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+
 springBoot-gradle = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "springBoot" }
 graalvm-native = { module = "org.graalvm.buildtools:native-gradle-plugin", version.ref = "graalvm-plugin" }
+
+# see: https://github.com/jwtk/jjwt
+jjwt-api = { module = "io.jsonwebtoken:jjwt-api", version.ref = "jjwt" }
+jjwt-impl = { module = "io.jsonwebtoken:jjwt-impl", version.ref = "jjwt" } # use runtime
+jjwt-jackson = { module = "io.jsonwebtoken:jjwt-jackson", version.ref = "jjwt" } # use runtime
+
 [plugins]
 
