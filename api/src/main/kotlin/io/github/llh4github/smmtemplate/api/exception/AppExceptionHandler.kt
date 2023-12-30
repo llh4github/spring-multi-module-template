@@ -18,7 +18,7 @@ class AppExceptionHandler {
 
     @ExceptionHandler(value = [AppException::class])
     fun appErrorHandler(e: AppException): JsonWrapper<Nothing> {
-        logger.error(e) { "应用出错： ${e.error}" }
-        return JsonWrapper.response(e.error)
+        logger.error(e) { "应用出错： ${e.errorMsg()}" }
+        return JsonWrapper.response(e.errorMsg())
     }
 }

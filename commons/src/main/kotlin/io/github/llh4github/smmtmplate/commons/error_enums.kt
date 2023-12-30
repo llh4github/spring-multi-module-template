@@ -23,3 +23,6 @@ enum class NoErrorEnums(
     DELETED("200", "删除成功"),
     OPERATED("200", "操作成功"),
 }
+
+data class ErrorMsg(override val code: String, override val msg: String) : ErrorConvention
+
