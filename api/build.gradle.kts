@@ -1,7 +1,14 @@
-
 plugins {
     id("kotlin-conventions")
     id("spring-conventions")
+}
+
+graalvmNative {
+    binaries {
+        named("main") {
+            imageName.set(rootProject.name + "-" + project.version)
+        }
+    }
 }
 
 dependencies {
