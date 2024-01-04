@@ -34,3 +34,7 @@ jobs:
         uses: gradle/gradle-build-action@v3.0.0-beta.3
         with:
           arguments: nativeCompile
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: api/native/nativeCompile/
