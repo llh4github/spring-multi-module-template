@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.archivesName
+
 plugins {
     id("kotlin-conventions")
     id("spring-conventions")
@@ -9,6 +11,9 @@ graalvmNative {
             imageName.set(rootProject.name + "-" + project.version)
         }
     }
+}
+tasks.withType<Jar> {
+    archivesName = rootProject.name
 }
 
 dependencies {
