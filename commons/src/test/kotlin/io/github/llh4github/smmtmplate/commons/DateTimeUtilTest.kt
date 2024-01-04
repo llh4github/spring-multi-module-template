@@ -1,4 +1,4 @@
-package io.github.llh4github.smmtmplate.utilities
+package io.github.llh4github.smmtmplate.commons
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

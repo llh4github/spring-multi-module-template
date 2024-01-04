@@ -1,7 +1,19 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.archivesName
 
 plugins {
     id("kotlin-conventions")
     id("spring-conventions")
+}
+
+graalvmNative {
+    binaries {
+        named("main") {
+            imageName.set(rootProject.name + "-" + project.version)
+        }
+    }
+}
+tasks.withType<Jar> {
+    archivesName = rootProject.name
 }
 
 dependencies {
@@ -11,7 +23,8 @@ dependencies {
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-    implementation(project(":utilities"))
+    implementation(libs.knife4j.openapi3)
+    implementation(project(":commons"))
 }
 
 
