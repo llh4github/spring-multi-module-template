@@ -23,12 +23,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - uses: graalvm/setup-graalvm@v1
-      with:
-        java-version: '17'  
-        distribution: 'graalvm'
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@v3.0.0-beta.3
-      with:
-        arguments: nativeCompile
+      - uses: actions/checkout@v4
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '17'
+          distribution: 'graalvm'
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+      - name: Build with Gradle
+        uses: gradle/gradle-build-action@v3.0.0-beta.3
+        with:
+          arguments: nativeCompile
