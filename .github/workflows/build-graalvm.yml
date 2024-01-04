@@ -39,4 +39,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: artifact
-          path: /api/native/nativeCompile/
+          path: ./api/native/nativeCompile/
