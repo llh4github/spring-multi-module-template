@@ -38,6 +38,5 @@ jobs:
         with:
           name: artifact
           path: |
-            api/libs/
-            !api/libs/*-plain.jar
-            
+            api/build/libs/
+            !api/build/libs/*-plain.jar
