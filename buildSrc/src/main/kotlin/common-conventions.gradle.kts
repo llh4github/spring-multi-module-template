@@ -15,14 +15,6 @@ repositories {
 group = project.group.toString()
 version = project.version.toString()
 
-graalvmNative {
-    binaries {
-        named("main") {
-            imageName.set(project.name + "-" + project.version)
-        }
-    }
-}
-
 dependencies {
     constraints {
         // Define dependency versions as constraints
