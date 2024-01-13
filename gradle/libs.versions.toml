@@ -2,6 +2,7 @@
 oshaiKotlinLogging = "5.1.0"
 jdk = "17"
 kotlin = "1.9.20"
+ksp = "1.9.20-1.0.14"
 kotlinForDetekt = "1.9.10"
 springBoot = "3.2.1"
 graalvm-plugin = "0.9.28"
@@ -12,6 +13,7 @@ easyexcel = "3.3.3"
 jjwt = "0.12.3"
 knife4j = "4.4.0"
 swagger3="2.2.19"
+jimmer = "0.8.75"
 
 [libraries]
 kotlin-allopen = { module = "org.jetbrains.kotlin:kotlin-allopen", version.ref = "kotlin" }
@@ -39,4 +41,4 @@ swagger-models = { module = "io.swagger.core.v3:swagger-models", version.ref = "
 swagger-annotations = { module = "io.swagger.core.v3:swagger-annotations", version.ref = "swagger3" }
 
 [plugins]
-
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
