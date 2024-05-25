@@ -1,7 +1,7 @@
 plugins {
     id("org.jetbrains.kotlin.jvm")
 }
-val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+val libs : VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
 repositories {
     mavenCentral()
 }
