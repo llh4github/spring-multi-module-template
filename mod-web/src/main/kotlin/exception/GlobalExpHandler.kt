@@ -12,13 +12,13 @@ class GlobalExpHandler {
     @ExceptionHandler(RuntimeException::class)
     fun handleException(e: RuntimeException): JsonWrapper<String> {
         logger.error(e) { "系统出现未知错误: ${e.message}" }
-        return JsonWrapper.fail(data=e.message)
+        return JsonWrapper.fail(data = e.message)
     }
 
 
     @ExceptionHandler(Exception::class)
     fun handleException(e: Exception): JsonWrapper<String> {
         logger.error(e) { "系统出现未知错误: ${e.message}" }
-        return JsonWrapper.fail(data=e.message)
+        return JsonWrapper.fail(data = e.message)
     }
 }
