@@ -14,3 +14,9 @@ dependencies {
     implementation(libs.knife4j.openapi3)
     implementation(project(":mod-commons"))
 }
+
+kotlin {
+    sourceSets.main {
+        kotlin.srcDir("build/generated/ksp/main/kotlin")
+    }
+}

@@ -26,6 +26,11 @@ data class JsonWrapper<T>(
         fun <T> ok(data: T? = null): JsonWrapper<T> {
             return JsonWrapper(data = data)
         }
+
+        @JvmStatic
+        fun <T> fail(code: String = "9999", msg: String = "未知错误", data: T? = null): JsonWrapper<T> {
+            return JsonWrapper(code = code, msg = msg, data = data)
+        }
     }
 }
 
