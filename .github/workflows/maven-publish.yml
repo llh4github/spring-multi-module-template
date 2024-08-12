@@ -1,0 +1,45 @@
+name: Maven Publish Action
+
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+on:
+  workflow_dispatch
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+      - name: Build with Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          arguments: build
+
+      - name: Publish Artifacts
+        run: |
+          if [[ $(cat "project.version") =~ "SNAPSHOT" ]] ; then
+            ./gradlew publishDistPublicationToSnapshotRepository 
+          else
+            if [[ $GITHUB_EVENT_NAME == "release" ]] ; then
+              ./gradlew publishDistPublicationToCentralRepository
+            else
+              echo "Skip release publication because this is not a release event"
+            fi
+          fi
+        env:
+          OSSRH_USERNAME: ${{secrets.OSSRH_USERNAME}}
+          OSSRH_PASSWORD: ${{secrets.OSSRH_PASSWORD}}
+
