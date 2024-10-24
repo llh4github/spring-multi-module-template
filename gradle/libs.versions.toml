@@ -2,7 +2,6 @@
 oshaiKotlinLogging = "5.1.0"
 jdk = "17"
 kotlin = "2.0.0"
-kotlinForDetekt = "1.9.10"
 springBoot = "3.3.0"
 graalvm-plugin = "0.10.0"
 junit5 = "5.10.0"
@@ -13,6 +12,7 @@ jjwt = "0.12.3"
 
 knife4j = "4.4.0"
 swagger3 = "2.2.19"
+# see Compatibility Table:  https://detekt.dev/docs/introduction/compatibility/
 detekt = "1.23.7"
 dokka = "1.9.20"
 
