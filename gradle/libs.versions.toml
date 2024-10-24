@@ -1,14 +1,19 @@
 [versions]
-oshaiKotlinLogging = "5.1.0"
-jdk = "17"
-kotlin = "2.0.0"
-springBoot = "3.3.0"
-graalvm-plugin = "0.10.0"
-junit5 = "5.10.0"
+jdk = "21"
+kotlin = "2.0.10"
+ksp = "2.0.10-1.0.24"
+springBoot = "3.3.4"
+graalvm-plugin = "0.10.3"
+
 slf4j = "2.0.9"
 logback = "1.4.14"
+oshaiKotlinLogging = "5.1.0"
+
 easyexcel = "3.3.3"
-jjwt = "0.12.3"
+jjwt = "0.12.6"
+
+junit5 = "5.11.0"
+kotest = "5.9.0"
 
 knife4j = "4.4.0"
 swagger3 = "2.2.19"
@@ -16,8 +21,6 @@ swagger3 = "2.2.19"
 detekt = "1.23.7"
 dokka = "1.9.20"
 
-ksp = "2.0.0-1.0.21"
-kotest = "5.9.0"
 # 目前还没发1.0版本
 jimmer = "+"
 
@@ -52,10 +55,16 @@ swagger-annotations = { module = "io.swagger.core.v3:swagger-annotations", versi
 dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
 detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 
+junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
+junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
+junit-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
 kotest = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
 
 jimmer-starter = { module = "org.babyfish.jimmer:jimmer-spring-boot-starter", version.ref = "jimmer" }
+jimmer-core = { module = "org.babyfish.jimmer:jimmer-core", version.ref = "jimmer" }
+jimmer-sql-kotlin = { module = "org.babyfish.jimmer:jimmer-sql-kotlin", version.ref = "jimmer" }
 jimmer-ksp = { module = "org.babyfish.jimmer:jimmer-ksp", version.ref = "jimmer" }
+
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
