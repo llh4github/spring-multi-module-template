@@ -1,5 +1,5 @@
 plugins {
-    id("kotlin-conventions")
+    id("common-conventions")
     id("spring-conventions")
     alias(libs.plugins.ksp)
 }
@@ -13,10 +13,4 @@ dependencies {
 
     implementation(libs.knife4j.openapi3)
     implementation(project(":mod-commons"))
-}
-
-kotlin {
-    sourceSets.main {
-        kotlin.srcDir("build/generated/ksp/main/kotlin")
-    }
 }

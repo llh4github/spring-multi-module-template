@@ -4,6 +4,7 @@ plugins {
 
 repositories {
     mavenCentral()
+    mavenLocal()
     gradlePluginPortal()
 }
 
@@ -15,4 +16,6 @@ dependencies {
     implementation(libs.graalvm.native)
     implementation(libs.oshai.kotlinLogging)
     implementation(libs.slf4j.api)
+    implementation(libs.dokka)
+    implementation(libs.detekt)
 }

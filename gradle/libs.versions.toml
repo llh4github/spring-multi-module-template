@@ -10,8 +10,12 @@ slf4j = "2.0.9"
 logback = "1.4.14"
 easyexcel = "3.3.3"
 jjwt = "0.12.3"
+
 knife4j = "4.4.0"
 swagger3 = "2.2.19"
+detekt = "1.23.7"
+dokka = "1.9.20"
+
 ksp = "2.0.0-1.0.21"
 kotest = "5.9.0"
 # 目前还没发1.0版本
@@ -45,9 +49,14 @@ jjwt-jackson = { module = "io.jsonwebtoken:jjwt-jackson", version.ref = "jjwt" }
 knife4j-openapi3 = { module = "com.github.xiaoymin:knife4j-openapi3-jakarta-spring-boot-starter", version.ref = "knife4j" }
 swagger-models = { module = "io.swagger.core.v3:swagger-models", version.ref = "swagger3" }
 swagger-annotations = { module = "io.swagger.core.v3:swagger-annotations", version.ref = "swagger3" }
+dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
+detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+
 kotest = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
 
 jimmer-starter = { module = "org.babyfish.jimmer:jimmer-spring-boot-starter", version.ref = "jimmer" }
 jimmer-ksp = { module = "org.babyfish.jimmer:jimmer-ksp", version.ref = "jimmer" }
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
